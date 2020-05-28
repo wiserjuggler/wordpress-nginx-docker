@@ -26,7 +26,7 @@ choco install git
  
 ## 1. Clone from git repository
 ```bash
- git clone https://github.com/varundhiman/wordpress-nginx-docker.git
+ git clone https://github.com/wiserjuggler/wordpress-nginx-docker.git
  ```
 ## 2. Setup Directories
 
