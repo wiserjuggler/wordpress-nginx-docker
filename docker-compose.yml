@@ -50,7 +50,7 @@ services:
       PMA_HOST: db:3306
       MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
  
-Volumes:
+volumes:
   wordpress:
   data_db:
   logs:
