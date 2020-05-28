@@ -3,27 +3,27 @@ version: '3'
    db:
      image: mariadb
      volumes:
-     - data_db:/var/lib/mysql
+       - data_db:/var/lib/mysql
      restart: unless-stopped
      environment:
-     MYSQL_ROOT_PASSWORD: mypassword
-     MYSQL_DATABASE: wordpressdb
-     MYSQL_USER: wordpress
-     MYSQL_PASSWORD: wordpress
+       MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}
+       MYSQL_DATABASE: wordpressdb
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: 28(Y$/'qSuAaJpE]
    
    wordpress:
+     depends_on:
+       - db
      image: wordpress:5.4.1-php7.2-fpm
      container_name: wordpress
      restart: unless-stopped
-     depends_on:
-     - db
      ports:
-     - '9000:9000'
+       - "9000:9000"
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_NAME: wordpressdb
        WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_PASSWORD: 28(Y$/'qSuAaJpE]
      volumes:
        - ./wordpress:/var/www/html
 
