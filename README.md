@@ -8,15 +8,15 @@
 3. Install Docker Compose
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
 4. Install git 
- # Centos 
+   Centos 
  ```bash
  sudo yum install git
  ```
- # Debian
+  Debian
  ```bash
  sudo apt install git
  ```
- #windows
+  windows
   ```powershell
  @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
   
@@ -42,7 +42,6 @@ sudo mkdir -p logs/nginx
 Run the following command to build your bulletin board image
 ```bash
 sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/
-wget 
 ```
 
 ## Run Docker-Compose
