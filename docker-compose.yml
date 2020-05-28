@@ -51,4 +51,4 @@ services:
       MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
 volumes:
   wordpress:
-  db:
+  data_db:
