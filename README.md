@@ -35,8 +35,7 @@ Once you have Docker, Docker Compose installed, you can proceed to setup directo
 ```bash
 sudo mkdir wordpress-docker
 cd wordpress-docker
-sudo mkdir nginx wordpress
-sudo mkdir -p logs/nginx
+sudo mkdir nginx wordpress logs
 ```
 
 ## 3. Configure Nginx
@@ -48,7 +47,7 @@ sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/
 ## 4. Run Docker-Compose
 Run the following command to start a container based on your new image
 ```docker
-cd ~/wordpress-nginx-docker
+sudo cp ~/wordpress-nginx-docker/docker-compose.yml .
 docker-compose up -d
 ```
 
