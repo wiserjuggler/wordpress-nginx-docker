@@ -6,10 +6,10 @@ services:
     - data_db:/var/lib/mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}
+      MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
       MYSQL_DATABASE: wordpressdb
       MYSQL_USER: wordpress
-      MYSQL_PASSWORD: 28(Y$/'qSuAaJpE]
+      MYSQL_PASSWORD: gxeLt6FXmSXMjnRA
   
   wordpress:
     depends_on:
@@ -48,4 +48,4 @@ services:
       - 3333:80
     environment:
     PMA_HOST: db:3306
-    MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}d 
+    MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn 
