@@ -45,7 +45,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: unless-stopped
     ports:
-      - 3333:80
+      - 3333:3333
     environment:
       PMA_HOST: db:3306
       MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
