@@ -1,4 +1,4 @@
-# Wordpress docker compose deployment using nginx and mariadb
+# Wordpress docker deployment using nginx, mariadb and phpmyadmin.
 
 ## Prerequisites
 
