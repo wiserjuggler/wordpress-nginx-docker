@@ -35,9 +35,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - ./logs/nginx:/var/log/nginx
-      - ./wordpress:/var/www/html
+      - nginx:/etc/nginx/conf.d
+      - logs:/var/log/nginx
+      - wordpress:/var/www/html
     links:
       - wordpress
 
@@ -52,3 +52,5 @@ services:
 volumes:
   wordpress:
   data_db:
+  nginx:
+  logs:
