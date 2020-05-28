@@ -3,7 +3,7 @@ services:
   db:
     image: mariadb
     volumes:
-    - data_db:/var/lib/mysql
+      - data_db:/var/lib/mysql
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
@@ -13,19 +13,19 @@ services:
   
   wordpress:
     depends_on:
-    - db
+      - db
     image: wordpress:5.4.1-php7.2-fpm
     container_name: wordpress
     restart: unless-stopped
     ports:
-    - "9000:9000"
+      - "9000:9000"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: wordpressdb
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: gxeLt6FXmSXMjnRA
       volumes:
-      - wordpress:/var/www/html
+        - wordpress:/var/www/html
 
   nginx:
     image: nginx:latest
