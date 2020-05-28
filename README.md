@@ -7,8 +7,26 @@
 [Docker engine Installation Guide](https://docs.docker.com/engine/install/)
 3. Install Docker Compose
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
-
-
+4. Install git 
+ # Centos 
+ ```bash
+ sudo yum install git
+ ```
+ # Debian
+ ```bash
+ sudo apt install git
+ ```
+ #windows
+  ```powershell
+ @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+  
+choco install git
+ ```
+ 
+## Clone from git repository
+```bash
+ git clone https://github.com/varundhiman/wordpress-nginx-docker.git
+ ```
 ## Setup Directories
 
 Once you have Docker, Docker Compose installed, you can proceed to setup directories for the WordPress installation.
@@ -23,14 +41,15 @@ sudo mkdir -p logs/nginx
 ## Configure Nginx
 Run the following command to build your bulletin board image
 ```bash
-cd nginx
+sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/
 wget 
 ```
 
-## Run your image as a container
+## Run Docker-Compose
 Run the following command to start a container based on your new image
 ```docker
-docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0
+cd ~/wordpress-nginx-docker
+docker-compose up -d
 ```
 
 ## Contributing
