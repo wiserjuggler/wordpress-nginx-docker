@@ -1,4 +1,4 @@
-# wordpress-nginx-docker
+# Wordpress-Nginx-Docker
 
 ## Prerequisites
 
