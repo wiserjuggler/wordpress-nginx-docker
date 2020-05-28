@@ -1,51 +1,51 @@
 version: '3'
- services:
-   db:
-     image: mariadb
-     volumes:
-       - data_db:/var/lib/mysql
-     restart: unless-stopped
-     environment:
-       MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}
-       MYSQL_DATABASE: wordpressdb
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: 28(Y$/'qSuAaJpE]
-   
-   wordpress:
-     depends_on:
-       - db
-     image: wordpress:5.4.1-php7.2-fpm
-     container_name: wordpress
-     restart: unless-stopped
-     ports:
-       - "9000:9000"
-     environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_NAME: wordpressdb
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: 28(Y$/'qSuAaJpE]
-     volumes:
-       - ./wordpress:/var/www/html
+services:
+  db:
+    image: mariadb
+    volumes:
+    - data_db:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: 28(Y$/'qSuAaJpE]
+  
+  wordpress:
+    depends_on:
+    - db
+    image: wordpress:5.4.1-php7.2-fpm
+    container_name: wordpress
+    restart: unless-stopped
+    ports:
+    - "9000:9000"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpressdb
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 28(Y$/'qSuAaJpE]
+      volumes:
+      - ./wordpress:/var/www/html
 
-   nginx:
-     image: nginx:latest
-     container_name: nginx
-     restart: unless-stopped
-     ports:
-       - "80:80"
-       - "443:443"
-     volumes:
-         - ./nginx:/etc/nginx/conf.d
-         - ./logs/nginx:/var/log/nginx
-         - ./wordpress:/var/www/html
-     links:
-       - wordpress
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+      - ./wordpress:/var/www/html
+    links:
+      - wordpress
 
-   phpmyadmin:
-     image: phpmyadmin/phpmyadmin
-     restart: unless-stopped
-     ports:
-       - 3333:80
-     environment:
-       PMA_HOST: Cloud_SQL_IP_Address
-       MYSQL_ROOT_PASSWORD: Cloud_SQL_Root_Password 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - 3333:80
+    environment:
+    PMA_HOST: db:3306
+    MYSQL_ROOT_PASSWORD: WA~973*?~MXPd7n}d 
