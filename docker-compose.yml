@@ -23,7 +23,7 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: wordpressdb
       WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: 28(Y$/'qSuAaJpE]
+      WORDPRESS_DB_PASSWORD: gxeLt6FXmSXMjnRA
       volumes:
       - ./wordpress:/var/www/html
 
