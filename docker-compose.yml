@@ -49,4 +49,6 @@ services:
     environment:
       PMA_HOST: db:3306
       MYSQL_ROOT_PASSWORD: jVFhAkFVpm33bgXn
-
+volumes:
+  wordpress:
+  db:
