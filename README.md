@@ -37,7 +37,7 @@ docker-compose up -d
 ## 3. Configure Nginx
 Run the following command to build your bulletin board image
 ```bash
-sudo cp wordpress.conf /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data/default.conf                                                       
+sudo cp wordpress.conf /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data/default.conf          
 ```
 ## 4. Restart Nginx 
 ```bash
