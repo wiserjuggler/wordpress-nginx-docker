@@ -3,11 +3,11 @@
 ## Prerequisites
 
 1. A running server
-2. Install Docker Engine
+2. Docker Engine
 [Docker engine Installation Guide](https://docs.docker.com/engine/install/)
-3. Install Docker Compose
+3. Docker Compose
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
-4. Install git 
+4. git 
   
   Centos 
  ```bash
