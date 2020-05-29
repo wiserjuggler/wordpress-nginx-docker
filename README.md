@@ -17,6 +17,9 @@
 Run the following command to start a container based on your image
 ```docker
 cd wordpress-nginx-docker
+
+```
+```docker
 docker-compose up -d
 ```
 ## 3. Configure Nginx
