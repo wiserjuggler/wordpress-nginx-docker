@@ -38,7 +38,7 @@ docker-compose up -d
 
 Get the path of Nginx Directory. Path should look like this.
 
-/var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data
+/var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data or /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data
 
 ```bash
 docker inspect nginx | grep -i "source"
