@@ -21,11 +21,11 @@ docker-compose up -d
 ```
 ## 3. Configure Nginx
 
-Get the path of Nginx Directory
+# Get the path of Nginx Directory
 ```bash
 docker inspect nginx | grep -i "source"
 ```
-Path should look like this
+Path should look like this:
 
 /var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data
 
@@ -33,7 +33,7 @@ or
 
 /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data
 
-Copy the Nginx default.conf file
+# Copy the Nginx default.conf file
 ```bash
 sudo cp default.conf /nginx_path
 ```
