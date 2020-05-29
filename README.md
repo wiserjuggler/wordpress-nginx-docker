@@ -27,7 +27,9 @@ docker inspect nginx | grep -i "source"
 ```
 Path should look like this
 
-/var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data or /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data
+/var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data
+or 
+/var/lib/docker/volumes/wordpressnginxdocker_nginx/_data
 
 Copy the Nginx default.conf file
 ```bash
