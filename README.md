@@ -29,15 +29,23 @@ choco install git
  git clone https://github.com/wiserjuggler/wordpress-nginx-docker.git
  ```
 ## 2. Run Docker-Compose
-Run the following command to start a container based on your new image
+Run the following command to start a container based on your image
 ```docker
 cd wordpress-nginx-docker
 docker-compose up -d
 ```
 ## 3. Configure Nginx
-Run the following command to build your bulletin board image
+
+Get the path of Nginx Directory. Path should look like this.
+
+/var/lib/docker/volumes/wordpress-nginx-docker_nginx/_data
+
 ```bash
-sudo cp wordpress.conf /var/lib/docker/volumes/wordpressnginxdocker_nginx/_data/default.conf          
+docker inspect nginx | grep -i "source"
+```
+Copy the wordpress.conf file
+```bash
+sudo cp default.conf /nginx_path
 ```
 ## 4. Restart Nginx 
 ```bash
