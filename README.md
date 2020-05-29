@@ -27,7 +27,7 @@ docker-compose up -d
 path=$(docker inspect nginx | grep -i  "/*_nginx/_data" | awk '{print substr($2,2, length($2)-3);}')
 ```
 ```bash
-cp default.conf /$path
+cp -f default.conf /$path
 ```
 ## 4. Restart Nginx 
 ```bash
