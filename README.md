@@ -8,7 +8,7 @@
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
 3. git 
 
-## git installation 
+## Git installation 
   Centos 
  ```bash
  sudo yum install git
