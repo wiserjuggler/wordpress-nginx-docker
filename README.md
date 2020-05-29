@@ -8,7 +8,7 @@
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
 3. git 
 
-## Git installation 
+## Git Installation 
   Centos 
  ```bash
  sudo yum install git
@@ -24,7 +24,7 @@
 choco install git
  ```
  
-## 1. Clone from git repository
+## 1. Clone Repository
 ```bash
  git clone https://github.com/wiserjuggler/wordpress-nginx-docker.git
  ```
