@@ -21,16 +21,12 @@ docker-compose up -d
 ```
 ## 3. Configure Nginx
 
-### Get the path of Nginx Directory
 ```bash
 path=$(docker inspect nginx | grep -i  "/*_nginx/_data" | awk '{print substr($2,2, length($2)-3);}')
-cp default.conf /$path
-```
-Path should look like this:
 
-### Copy the Nginx default.conf file
+```
 ```bash
-cp default.conf /nginx_path
+cp default.conf /$path
 ```
 ## 4. Restart Nginx 
 ```bash
