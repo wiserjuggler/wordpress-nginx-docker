@@ -41,7 +41,7 @@ sudo mkdir nginx wordpress logs
 ## 3. Configure Nginx
 Run the following command to build your bulletin board image
 ```bash
-sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/
+sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/default.conf
 ```
 
 ## 4. Run Docker-Compose
