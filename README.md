@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-1. A running server
-2. Docker Engine
+1. Docker Engine
 [Docker engine Installation Guide](https://docs.docker.com/engine/install/)
-3. Docker Compose
+2. Docker Compose
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
-4. git 
-  
+3. git 
+
+## git installation 
   Centos 
  ```bash
  sudo yum install git
@@ -28,27 +28,20 @@ choco install git
 ```bash
  git clone https://github.com/wiserjuggler/wordpress-nginx-docker.git
  ```
-## 2. Setup Directories
-
-Once you have Docker, Docker Compose installed, you can proceed to setup directories for the WordPress installation.
-
-```bash
-sudo mkdir wordpress-docker
-cd wordpress-docker
-sudo mkdir nginx wordpress logs
+## 2. Run Docker-Compose
+Run the following command to start a container based on your new image
+```docker
+cd wordpress-nginx-docker
+docker-compose up -d
 ```
-
 ## 3. Configure Nginx
 Run the following command to build your bulletin board image
 ```bash
-sudo cp ~/wordpress-nginx-docker/wordpress.conf nginx/default.conf
+sudo cp wordpress.conf /var/lib/docker/volumes/wordpressdocker_nginx/_data/default.conf
 ```
-
-## 4. Run Docker-Compose
-Run the following command to start a container based on your new image
-```docker
-sudo cp ~/wordpress-nginx-docker/docker-compose.yml .
-docker-compose up -d
+## 4. Restart Nginx 
+```bash
+docker container restart nginx 
 ```
 
 ## Contributing
