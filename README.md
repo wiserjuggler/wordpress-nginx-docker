@@ -6,7 +6,8 @@
 [Docker engine Installation Guide](https://docs.docker.com/engine/install/)
 2. Docker Compose
 [Docker compose Installation Guide](https://docs.docker.com/compose/install/)
-3. [git] (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. git
+[git installtion instruction](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
  
 ## 1. Clone Repository
 ```bash
