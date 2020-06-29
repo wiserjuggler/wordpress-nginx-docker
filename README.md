@@ -29,7 +29,6 @@ path=$(docker inspect nginx | grep -i  "/*_nginx/_data" | awk '{print substr($2,
 ```bash
 cp -f default.conf /$path
 ```
-## 4. Restart Nginx 
 ```bash
 docker container restart nginx 
 ```
